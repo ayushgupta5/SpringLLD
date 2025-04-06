@@ -1,5 +1,6 @@
 package com.LLD.LLD.Model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -18,6 +19,7 @@ public class Room {
     private String roomNumber;
     private String roomType; // SINGLE, DOUBLE, SUITE
     private double pricePerNight;
-    private boolean isAvailable;
+    @Column(name = "available", columnDefinition = "TINYINT(1)")
+    private boolean available;
 }
 

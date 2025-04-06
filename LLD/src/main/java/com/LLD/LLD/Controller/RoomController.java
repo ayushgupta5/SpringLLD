@@ -35,7 +35,14 @@ public class RoomController {
 
     @PutMapping("/update/{roomID}")
     public ResponseEntity<?> updateRoom(@PathVariable Integer roomID, @RequestBody Room updatedRoom) {
+        
+        System.out.println(updatedRoom);
         Room room = roomService.updateRoom(roomID, updatedRoom);
+        System.out.println("Ayush");
+        System.out.println("Ayush");
+        System.out.println("Ayush");
+        System.out.println("Ayush");
+        System.out.println("Ayush");
         return new ResponseEntity<>(room, HttpStatus.FOUND);
     }
 
