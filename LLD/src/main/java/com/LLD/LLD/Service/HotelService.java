@@ -19,7 +19,10 @@ public class HotelService implements IHotelService{
     @Override
     public Hotel updateHotel(Integer hotelID, Hotel hotel) {
         Hotel hotelObject = hotelRepository.findById(hotelID).get();
+        hotelObject.setName(hotel.getName());
+        hotelObject.setLocation(hotel.getLocation());
         hotelObject.setDescription(hotel.getDescription());
+        hotelObject.setRating(hotel.getRating());
         return hotelRepository.save(hotelObject);
     }
 
