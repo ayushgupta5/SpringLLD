@@ -24,7 +24,7 @@ public class HotelController {
     @GetMapping("/get/{hotelID}")
     public ResponseEntity<?> getHotelByID(@PathVariable Integer hotelID) {
         Hotel hotel = hotelService.getHotel(hotelID);
-        return new ResponseEntity<>(hotel, HttpStatus.OK);
+        return new ResponseEntity<>(hotel, HttpStatus.FOUND);
     }
 
     @GetMapping("/get")
@@ -36,7 +36,7 @@ public class HotelController {
     @PutMapping("/update/{hotelID}")
     public ResponseEntity<?> updateHotel(@PathVariable Integer hotelID, @RequestBody Hotel updatedHotel) {
         Hotel hotel = hotelService.updateHotel(hotelID, updatedHotel);
-        return new ResponseEntity<>(hotel, HttpStatus.FOUND);
+        return new ResponseEntity<>(hotel, HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{hotelID}")
