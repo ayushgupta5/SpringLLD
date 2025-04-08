@@ -28,6 +28,22 @@ public class MovieService implements IMovieService {
         movieObject.setGenre(movie.getGenre());
         movieObject.setTitle(movie.getTitle());
 
+//        movieObject.setDirector(movie.getDirector());
+//        movieObject.setDuration(movie.getDuration());
+//        movieObject.setReleaseYear(movie.getReleaseYear());
+//        movieObject.setRating(movie.getRating());
+//        movieObject.setLanguage(movie.getLanguage());
+//        movieObject.setGenre(movie.getGenre());
+//        movieObject.setTitle(movie.getTitle());
+
+        //        movieObject.setDirector(movie.getDirector());
+//        movieObject.setDuration(movie.getDuration());
+//        movieObject.setReleaseYear(movie.getReleaseYear());
+//        movieObject.setRating(movie.getRating());
+//        movieObject.setLanguage(movie.getLanguage());
+//        movieObject.setGenre(movie.getGenre());
+//        movieObject.setTitle(movie.getTitle());
+
         return movieRepository.save(movieObject);
 
     }
