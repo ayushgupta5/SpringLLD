@@ -24,7 +24,7 @@ public class BookingController {
     @GetMapping("/get/{bookingID}")
     public ResponseEntity<?> getBookingById(@PathVariable Integer bookingID) {
         Booking booking = bookingService.getBooking(bookingID);
-        return new ResponseEntity<>(booking, HttpStatus.OK);
+        return new ResponseEntity<>(booking, HttpStatus.FOUND);
     }
 
     // READ - GET by ID
@@ -38,7 +38,7 @@ public class BookingController {
     @PutMapping("/update/{bookingID}")
     public ResponseEntity<?> updateBooking(@PathVariable Integer bookingID, @RequestBody Booking updatedBooking) {
         Booking booking = bookingService.updateBooking(bookingID, updatedBooking);
-        return new ResponseEntity<>(booking, HttpStatus.FOUND);
+        return new ResponseEntity<>(booking, HttpStatus.OK);
     }
 
     // DELETE - DELETE
